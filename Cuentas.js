@@ -2,12 +2,23 @@ export class Cuenta{
     #cliente;    
     #saldo;
 
-    constructor(cliente, numero,agencia,saldo){
+    constructor( cliente, numero,agencia,saldo){
+        
         this.numero=numero;
         this.agencia=agencia;
         this.#cliente=cliente;
         this.#saldo=saldo;
     }
+
+    set cliente(valor) {
+        if (valor instanceof Cliente)
+            this.#cliente = valor;
+    }
+
+    get cliente() {
+        return this.#cliente;
+    }
+
 
     depositoEnCuenta(valor) {
         if (valor > 0)
@@ -15,7 +26,7 @@ export class Cuenta{
         return this.#saldo;
     }
 
-    retirarDeCuenta(valor) {
+    retirarDeCuenta(valor) {        
         if (valor <= this.#saldo)
             this.#saldo -= valor;
         return this.#saldo;
