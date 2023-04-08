@@ -9,4 +9,11 @@ export class CuentaCorriente extends Cuenta{
      CuentaCorriente.cantidadCuentas++;
     }
 
+    retirarDeCuenta(valor) {        
+      
+        super._retirarDeCuenta(valor,5);
+
+        
+    }
+
 }
