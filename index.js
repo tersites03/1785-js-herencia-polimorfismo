@@ -21,4 +21,5 @@ cuentaAhorroLeonardo.depositoEnCuenta(200);
 console.log(cuentaAhorroLeonardo.verSaldo());
 cuentaAhorroLeonardo.retirarDeCuenta(120);
 console.log(cuentaAhorroLeonardo.verSaldo());
+console.log(cuentaSimple);
 
